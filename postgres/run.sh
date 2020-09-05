@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo -e 'Starting postgres docker container'
-docker run -p 5432:5432 -d \
+docker run --rm -p 5432:5432 -d \
     -e POSTGRES_PASSWORD=postgres \
     --name my-project-postgres \
     my-project-postgres-img
